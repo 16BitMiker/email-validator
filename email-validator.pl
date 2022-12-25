@@ -19,10 +19,10 @@ package Validate::Email
 		# regex grammar
 		(?(DEFINE)
 
-			# no punctuation
+			# all punctuation
 			(?<punct>[[:punct:]])
 	
-			# valid e-mail characters
+			# contains all valid e-mail characters
 			(?<alnum>[[:alnum:]\.+-]+)
 		
 		)
