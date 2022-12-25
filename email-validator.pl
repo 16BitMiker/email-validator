@@ -29,7 +29,7 @@ package Validate::Email
 		
 		^
 		# e-mail domain ends with letters
-		(?=.*\.[A-Z]+$)
+		(?=.*\.[[:alpha:]]+$)
 		
 		# e-mail contains numbers, letters, + , -
 		(?=(?&alnum)@(?&alnum))
@@ -40,7 +40,7 @@ package Validate::Email
 		# dosn't end with numbers
 		(?!.*?@.*\.\d+$)
 		
-		# domain has more then 2 characters
+		# no two periods in email
 		(?!.*\.{2,})
 
 		# no starting punctuation
